@@ -22,6 +22,7 @@ module Knock
     end
 
     def auth_params
+      puts "#{params.inspect}"
       params.require(:auth).permit Knock.handle_attr, :password
     end
   end
